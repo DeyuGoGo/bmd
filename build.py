@@ -15,10 +15,10 @@ with open(args.input) as fp:
         if b == -1:
             target.write(line)
             continue
-        print (len(line))
+        # print (len(line))
         for i in range(2, 10, +1):
             numString = (line[b+1:b-len(line)+i])
-            print (numString)
+            # print (numString)
             if numString.isnumeric() == 0:
                 break
         if(i==2):
@@ -26,5 +26,5 @@ with open(args.input) as fp:
         else:
             a = line[:b-len(line)+1] + str(int(int(numString[:-1])*float(args.number))) + line[b+i-1:]
             target.write(a)
-        print (line)
+        # print (line)
 target.close()
